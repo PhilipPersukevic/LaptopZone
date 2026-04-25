@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krepšelis - LaptopZone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>💻 LaptopZone</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Pradžia</a>
+                <a href="products.html">Produktai</a>
+                <a href="cart.html" class="cart-link active">
+                    🛒 Krepšelis <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" id="nav-auth">Prisijungti</a>
+                <a href="#" id="nav-logout" style="display: none;">Atsijungti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h1>Jūsų krepšelis</h1>
+            
+            <div class="cart-empty" id="cart-empty">
+                <p style="font-size: 3rem; margin-bottom: 1rem;">🛒</p>
+                <p style="font-size: 1.3rem; margin-bottom: 0.5rem;">Krepšelis tuščias</p>
+                <p style="color: #64748b; margin-bottom: 1.5rem;">Pradėkite apipirkimą ir raskite geriausią laptopą!</p>
+                <a href="products.html" class="btn btn-primary">Naršyti produktus</a>
+            </div>
+
+            <div class="cart-content" id="cart-content" style="display: none;">
+                <div class="cart-items">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Produktas</th>
+                                <th>Kaina</th>
+                                <th>Kiekis</th>
+                                <th>Suma</th>
+                                <th>Veiksmas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items-list">
+                            <!-- Loaded by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-summary">
+                    <h2>📊 Suvestinė</h2>
+                    <div class="summary-row">
+                        <span>Tarpinė suma:</span>
+                        <span id="subtotal">€ 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Pristatymas:</span>
+                        <span id="shipping">€ 0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Iš viso:</span>
+                        <span id="total">€ 0.00</span>
+                    </div>
+                    <button class="btn btn-success" id="checkout-btn">✅ Eiti į kasą</button>
+                    <a href="products.html" class="btn btn-secondary">Tęsti apsipirkimą</a>
+                    <p class="checkout-hint">💡 Galite pirkti be registracijos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCheckoutModal()">&times;</span>
+            <h2>🛍️ Užbaigti pirkimą</h2>
+            
+            <!-- Login/Guest Tabs -->
+            <div class="checkout-tabs">
+                <button class="tab-btn active" onclick="switchCheckoutTab('guest')">👤 Svečias</button>
+                <button class="tab-btn" onclick="switchCheckoutTab('login')">🔐 Prisijungti</button>
+            </div>
+
+            <!-- Guest Checkout -->
+            <div id="guest-checkout" class="checkout-tab-content active">
+                <form id="guest-checkout-form" class="checkout-form">
+                    <div class="form-group">
+                        <label>👤 Jūsų vardas ir pavardė:</label>
+                        <input type="text" id="guest-name" required placeholder="Pvz. Jurgis Vytautas">
+                    </div>
+                    <div class="form-group">
+                        <label>📧 El. paštas:</label>
+                        <input type="email" id="guest-email" required placeholder="pvz@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>📱 Telefono numeris:</label>
+                        <input type="tel" id="guest-phone" required placeholder="+370 xxx xxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label>📍 Pristatymo adresas:</label>
+                        <input type="text" id="guest-address" required placeholder="Gatvė, namas, miestas">
+                    </div>
+                    <p class="info-text">Patvirtinimą sutikime ir informaciją apie užsakymą gausite el. paštu.</p>
+                    <button type="submit" class="btn btn-success" style="width: 100%;">Patvirtinti užsakymą</button>
+                </form>
+            </div>
+
+            <!-- Login Option -->
+            <div id="login-checkout" class="checkout-tab-content" style="display: none;">
+                <form id="login-checkout-form" class="checkout-form">
+                    <div class="form-group">
+                        <label>📧 El. paštas:</label>
+                        <input type="email" id="checkout-login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>🔑 Slaptažodis:</label>
+                        <input type="password" id="checkout-login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success" style="width: 100%;">Prisijungti ir užbaigti pirkimą</button>
+                    <p style="text-align: center; margin-top: 1rem; color: #64748b;">
+                        Nėra paskyros? <a href="login.html" class="link">Registracija</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 LaptopZone. Visos teisės saugomos.</p>
+            <p>Specializuota nešiojamų kompiuterių parduotuvė</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">🚚 Nemokamas pristatymas | 💳 Saugi mokėjimo sistema | ⭐ 24/7 Palaikymas</p>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
