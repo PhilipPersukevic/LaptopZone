@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>💻 LaptopZone</h1>
+                <img src="images/ChatGPT Image Apr 29, 2026, 11_18_04 AM.png" alt="LaptopZone Logo">
             </div>
             <div class="nav-links">
                 <a href="index.html">Pradžia</a>
@@ -29,37 +29,43 @@
     <section class="filters-section">
         <div class="container">
             <div class="section-welcome">
-                <h2>🔍 Raskite savą perfectą laptopą</h2>
-                <p>Pasirinkite kategorę, užfiltruokite pagal reikalavimus - rąskėme geriausią!</p>
+                <h2>🔍 Raskite savo svajonių nešiojamąjį kompiuterį</h2>
+                <p>Pasirinkite kategoriją, užpildykite reikalavimus – parinksime Jums tinkamiausią!</p>
             </div>
             <div class="filters">
-                <div class="filter-group">
-                    <label>Kategorija:</label>
-                    <select id="category-filter">
-                        <option value="">Visos kategorijos</option>
-                        <option value="gaming">🎮 Gaming</option>
-                        <option value="work">💼 Darbui</option>
-                        <option value="student">🎓 Studentams</option>
-                        <option value="ultrabook">✨ Premium</option>
-                    </select>
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <label>Kategorija:</label>
+                        <select id="category-filter">
+                            <option value="all">Visos kategorijos</option>
+                            <option value="gaming">Žaidimams</option>
+                            <option value="work">Darbui</option>
+                            <option value="student">Studentams</option>
+                            <option value="ultrabook">Premium</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Gamintojas:</label>
+                        <select id="brand-filter">
+                            <option value="">Visi gamintojai</option>
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="ASUS">ASUS</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Rūšiavimas:</label>
+                        <select id="sort-filter">
+                            <option value="name">Pagal pavadinimą</option>
+                            <option value="price-low">Kaina: mažiausia</option>
+                            <option value="price-high">Kaina: didžiausia</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="filter-group">
-                    <label>Gamintojas:</label>
-                    <select id="brand-filter">
-                        <option value="">Visi gamintojai</option>
-                        <option value="Lenovo">Lenovo</option>
-                        <option value="ASUS">ASUS</option>
-                    </select>
+
+                <div class="search-row">
+                    <label>Ieškoti produkto:</label>
+                    <input type="text" id="search-filter" class="search-input" placeholder="Įveskite modelį arba specifikaciją...">
                 </div>
-                <div class="filter-group">
-                    <label>Rūšiavimas:</label>
-                    <select id="sort-filter">
-                        <option value="name">Pagal pavadinimą</option>
-                        <option value="price-low">Kaina: mažiausia</option>
-                        <option value="price-high">Kaina: didžiausia</option>
-                    </select>
-                </div>
-                <input type="text" id="search-filter" class="search-input" placeholder="Ieškoti...">
             </div>
         </div>
     </section>

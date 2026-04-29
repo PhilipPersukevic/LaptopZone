@@ -98,23 +98,27 @@ function updateCartUI() {
 function renderCartItems() {
     const cart = getCart();
     const cartList = document.getElementById('cart-items-list');
-    
     if (!cartList) return;
 
     cartList.innerHTML = cart.map(item => `
         <tr>
-            <td>
-                <strong>${item.name}</strong><br>
-                <small>${item.brand}</small>
+            <td style="text-align: left;">
+                <strong class="cart-item-name">${item.name}</strong>
             </td>
             <td>${formatPrice(item.price)}</td>
             <td>
-                <input type="number" class="quantity-input" value="${item.quantity}" 
-                       min="1" onchange="updateCartItem(${item.id}, this.value)">
+                <div class="quantity-control" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+                    <button class="qty-btn" onclick="updateCartItem(${item.id}, ${item.quantity - 1})">−</button>
+                    <input type="number" class="quantity-input" value="${item.quantity}" readonly 
+                           style="width: 40px; text-align: center; border: 1px solid #000;">
+                    <button class="qty-btn" onclick="updateCartItem(${item.id}, ${item.quantity + 1})">+</button>
+                </div>
             </td>
-            <td>${formatPrice(item.price * item.quantity)}</td>
+            <td class="cart-total-cell" style="font-weight: bold;">
+                ${formatPrice(item.price * item.quantity)}
+            </td>
             <td>
-                <button class="remove-btn" onclick="removeFromCart(${item.id})">Pašalinti</button>
+                <button class="remove-btn" onclick="removeFromCart(${item.id})">ŠALINTI</button>
             </td>
         </tr>
     `).join('');
@@ -123,7 +127,7 @@ function renderCartItems() {
 function updateCartSummary() {
     const cart = getCart();
     const subtotal = getCartTotal();
-    const shipping = subtotal > 0 && subtotal < 50 ? 5.99 : 0;
+    const shipping = subtotal > 0 && subtotal < 1500 ? 5.99 : 0;
     const total = subtotal + shipping;
 
     const subtotalEl = document.getElementById('subtotal');
@@ -214,7 +218,7 @@ function completeGuestCheckout() {
     const address = document.getElementById('guest-address').value;
     const cart = getCart();
     const total = getCartTotal();
-    const shipping = total < 50 ? 5.99 : 0;
+    const shipping = total < 1500 ? 5.99 : 0;
 
     // Save guest order
     const orders = JSON.parse(localStorage.getItem('laptopzone_orders') || '[]');
@@ -249,7 +253,7 @@ function completeLoginCheckout() {
         const user = getCurrentUser();
         const cart = getCart();
         const total = getCartTotal();
-        const shipping = total < 50 ? 5.99 : 0;
+        const shipping = total < 1500 ? 5.99 : 0;
 
         // Save order for logged-in user
         const orders = JSON.parse(localStorage.getItem('laptopzone_orders') || '[]');

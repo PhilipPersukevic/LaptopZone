@@ -10,7 +10,7 @@ const products = [
         price: 1199,
         image: "💻",
         specs: "Intel Core i7-13650HX, RTX 4060, 15.6\" 165Hz, 16GB RAM, 512GB SSD",
-        description: "Excellent gaming laptop for mid to high-level gaming. Features Intel's latest processor with RTX 4060 graphics."
+        description: "Puikus nešiojamasis kompiuteris vidutinio ir aukšto lygio žaidimams. Turi naujausią Intel procesorių bei RTX 4060 vaizdo plokštę."
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const products = [
         price: 1549,
         image: "💻",
         specs: "AMD Ryzen 7 7745HX, RTX 4070, 16\" 165Hz, 16GB RAM, 512GB SSD",
-        description: "Premium gaming laptop with powerful AMD processor and RTX 4070. Perfect for enthusiasts."
+        description: "Aukščiausios kokybės žaidimų kompiuteris su galingu AMD procesoriumi ir RTX 4070. Puikiai tinka entuziastams."
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const products = [
         price: 2549,
         image: "💻",
         specs: "Intel Core i9-13900HX, RTX 4080, 16\" 240Hz MiniLED, 32GB RAM, 1TB SSD",
-        description: "Top-tier gaming beast. The ultimate gaming laptop for hardcore players and professionals."
+        description: "Tikras žaidimų žvėris. Galutinis pasirinkimas užkietėjusiems žaidėjams ir profesionalams."
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ const products = [
         price: 949,
         image: "💻",
         specs: "AMD Ryzen 7 7435HS, RTX 4060, 15.6\" 144Hz FHD, 8GB RAM, 512GB SSD",
-        description: "Best value gaming laptop for beginners. Great performance at a budget-friendly price."
+        description: "Geriausios vertės žaidimų kompiuteris pradedantiesiems. Puikus našumas už prieinamą kainą."
     },
     {
         id: 5,
@@ -50,7 +50,7 @@ const products = [
         price: 1699,
         image: "💻",
         specs: "Intel Core i7-13650HX, RTX 4070, 16\" 165Hz QHD, 16GB RAM, 512GB SSD",
-        description: "High-performance gaming laptop. Excellent balance of power and portability."
+        description: "Aukšto našumo žaidimų kompiuteris. Puikus galios ir mobilumo balansas."
     },
     {
         id: 6,
@@ -60,7 +60,7 @@ const products = [
         price: 1799,
         image: "💻",
         specs: "AMD Ryzen 9 7940HS, RTX 4060, 14\" 165Hz OLED, 16GB RAM, 512GB SSD",
-        description: "Ultra-portable gaming machine. Compact yet powerful for gaming on the go."
+        description: "Itin portabilus žaidimų įrenginys. Kompaktiškas, bet galingas žaidimams keliaujant."
     },
 
     // ==================== WORK / PROFESSIONAL ====================
@@ -72,7 +72,7 @@ const products = [
         price: 1999,
         image: "💻",
         specs: "Intel Core i7, 16\" OLED, IR Camera, 16GB RAM, 512GB SSD, 15h battery",
-        description: "Premium business laptop. Ultra-secure with military-grade certification."
+        description: "Aukščiausios klasės verslo kompiuteris. Itin saugus, turintis karinio lygio sertifikatą."
     },
     {
         id: 8,
@@ -82,7 +82,7 @@ const products = [
         price: 1249,
         image: "💻",
         specs: "AMD Ryzen Pro, TPM 2.0, 14\" FHD, 16GB RAM, 512GB SSD, 13h battery",
-        description: "Reliable business partner. Perfect for professionals and corporations."
+        description: "Patikimas verslo partneris. Puikiai tinka profesionalams ir didelėms korporacijoms."
     },
     {
         id: 9,
@@ -92,7 +92,7 @@ const products = [
         price: 849,
         image: "💻",
         specs: "Intel Core i5, 14\" FHD IPS, 8GB RAM, 256GB SSD, 12h battery",
-        description: "Great for small business and startups. Excellent value for money."
+        description: "Puikus pasirinkimas smulkiam verslui ir startuoliams. Puikus kainos ir kokybės santykis."
     },
     {
         id: 10,
@@ -102,7 +102,7 @@ const products = [
         price: 1899,
         image: "💻",
         specs: "Intel Core i7, 14\" OLED, IR Camera, 16GB RAM, 512GB SSD, 0.88kg",
-        description: "Lightest business laptop in the world. Perfect for mobile professionals."
+        description: "Lengviausias verslo kompiuteris pasaulyje. Idealus nuolat judantiems profesionalams."
     },
     {
         id: 11,
@@ -112,7 +112,7 @@ const products = [
         price: 1249,
         image: "💻",
         specs: "Intel Core i7, 14\" 2-in-1 OLED, Stylus, LTE, 16GB RAM, 512GB SSD",
-        description: "Versatile 2-in-1 laptop. Great for meetings and presentations on the move."
+        description: "Universalus „2-in-1“ kompiuteris. Puikiai tinka susitikimams ir prezentacijoms kelyje."
     },
     {
         id: 12,
@@ -122,7 +122,7 @@ const products = [
         price: 2399,
         image: "💻",
         specs: "Intel Core i9, 16\" OLED 3.2K Pantone, RTX 4050, 32GB RAM, 1TB SSD",
-        description: "Creator's dream machine. Perfect for designers, video editors, and content creators."
+        description: "Kūrėjų svajonių mašina. Puikiai tinka dizaineriams, vaizdo įrašų montuotojams ir turinio kūrėjams."
     },
 
     // ==================== STUDENT / EVERYDAY ====================
@@ -134,7 +134,7 @@ const products = [
         price: 474,
         image: "💻",
         specs: "Intel Core i5, 15.6\" FHD IPS, 8GB RAM, 512GB SSD, 10h battery",
-        description: "Budget-friendly laptop for everyday use. Great for students and general tasks."
+        description: "Biudžetinis nešiojamasis kompiuteris kasdieniam naudojimui. Puikiai tinka studentams ir paprastoms užduotims."
     },
     {
         id: 14,
@@ -144,7 +144,7 @@ const products = [
         price: 674,
         image: "💻",
         specs: "Intel Core i5, 15.6\" FHD IPS 300nit, 16GB RAM, 512GB SSD, 12h battery",
-        description: "Best value for students. Great performance-to-price ratio."
+        description: "Geriausia vertė studentams. Puikus našumo ir kainos santykis."
     },
     {
         id: 15,
@@ -154,7 +154,7 @@ const products = [
         price: 899,
         image: "💻",
         specs: "Intel Core i5, 14\" OLED 2.8K, 16GB RAM, 512GB SSD, 12h battery",
-        description: "Stylish and portable 2-in-1 laptop. Perfect for creative students."
+        description: "Stilingas ir portabilus „2-in-1“ kompiuteris. Puikiai tinka kūrybingiems studentams."
     },
     {
         id: 16,
@@ -164,7 +164,7 @@ const products = [
         price: 524,
         image: "💻",
         specs: "AMD Ryzen 5, 15.6\" FHD IPS 90Hz, 8GB RAM, 512GB SSD, 9h battery",
-        description: "Sleek and affordable. Great display for its price range."
+        description: "Elegantiškas ir prieinamas. Puikus ekranas pagal šią kainų kategoriją."
     },
     {
         id: 17,
@@ -174,7 +174,7 @@ const products = [
         price: 774,
         image: "💻",
         specs: "Intel Core i5, 15.6\" OLED FHD, 16GB RAM, 512GB SSD, 10h battery",
-        description: "Premium student laptop. Beautiful OLED display for work and entertainment."
+        description: "Aukštesnės klasės studentų kompiuteris. Nuostabus OLED ekranas darbui ir pramogoms."
     },
     {
         id: 18,
@@ -184,7 +184,7 @@ const products = [
         price: 999,
         image: "💻",
         specs: "Intel Core i7, 14\" OLED 2.8K, 16GB RAM, 512GB SSD, 12h battery, 1.39kg",
-        description: "Premium ultrabook. Lightweight and powerful for the modern student."
+        description: "Premium klasės ultrabook'as. Lengvas ir galingas šiuolaikiniam studentui."
     },
 
     // ==================== PREMIUM / ULTRABOOK ====================
@@ -196,7 +196,7 @@ const products = [
         price: 2799,
         image: "💻",
         specs: "Intel Core Ultra, 13.3\" OLED Foldable, 16GB RAM, 512GB SSD",
-        description: "Revolutionary foldable laptop. The future is here."
+        description: "Revoliucinis sulankstomas kompiuteris. Ateitis jau čia."
     },
     {
         id: 20,
@@ -206,7 +206,7 @@ const products = [
         price: 1599,
         image: "💻",
         specs: "Intel Core i7, 14\" OLED 2.8K, 16GB RAM, 512GB SSD, Built-in stylus",
-        description: "Premium 2-in-1 convertible. Perfect for creators and professionals."
+        description: "Premium klasės lankstomas kompiuteris. Puikiai tinka kūrėjams ir profesionalams."
     },
     {
         id: 21,
@@ -216,7 +216,7 @@ const products = [
         price: 1299,
         image: "💻",
         specs: "Intel Core Ultra (NPU), 14\" OLED 2.8K, 16GB RAM, 512GB SSD",
-        description: "AI-powered laptop. Experience the future of computing with NPU."
+        description: "Dirbtinio intelekto palaikomas kompiuteris. Patirkite skaičiavimo ateitį su NPU procesoriumi."
     },
     {
         id: 22,
@@ -226,7 +226,7 @@ const products = [
         price: 2199,
         image: "💻",
         specs: "Intel Core i9, 14\" OLED 2.8K, RTX 4070, 32GB RAM, 1TB SSD",
-        description: "Powerful ultrabook for creators. Compact yet mighty."
+        description: "Galingas ultrabook'as kūrėjams. Kompaktiškas, bet itin pajėgus."
     },
     {
         id: 23,
@@ -236,7 +236,7 @@ const products = [
         price: 2899,
         image: "💻",
         specs: "Intel Core i9, 16\" OLED Pantone, RTX 4090, 32GB RAM, 2TB SSD",
-        description: "Ultimate creative machine. Professional-grade display and power."
+        description: "Aukščiausia kūrybinė mašina. Profesionalaus lygio ekranas ir galia."
     },
     {
         id: 24,
@@ -246,7 +246,7 @@ const products = [
         price: 1199,
         image: "💻",
         specs: "Qualcomm Snapdragon X Elite, 15.6\" OLED, 16GB RAM, 512GB SSD, 20+h battery",
-        description: "ARM-powered excellence. Incredible battery life with all-day productivity."
+        description: "ARM architektūros meistriškumas. Neįtikėtinas baterijos veikimo laikas visos dienos produktyvumui."
     }
 ];
 
@@ -257,7 +257,9 @@ function getProductById(id) {
 
 // Function to get products by category
 function getProductsByCategory(category) {
-    if (!category) return products;
+    // Pridedame patikrinimą: jei category yra tuščia ARBA lygi 'all', grąžiname visus produktus
+    if (!category || category === 'all') return products;
+    
     return products.filter(p => p.category === category);
 }
 
@@ -306,7 +308,7 @@ function formatPrice(price) {
 // Function to create product card HTML
 function createProductCard(product) {
     return `
-        <div class="product-card">
+        <div class="product-card" onclick="window.location.href='product.html?id=${product.id}'" style="cursor: pointer;">
             <div class="product-image">${product.image}</div>
             <div class="product-info">
                 <div class="product-brand">${product.brand}</div>
@@ -315,8 +317,7 @@ function createProductCard(product) {
                 <p class="product-specs">${product.specs.substring(0, 60)}...</p>
                 <div class="product-price">${formatPrice(product.price)}</div>
                 <div class="product-actions">
-                    <a href="product.html?id=${product.id}" class="btn btn-secondary">Detailės</a>
-                    <button onclick="addToCart(${product.id})" class="btn btn-primary">Į krepšelį</button>
+                    <button onclick="event.stopPropagation(); addToCart(${product.id})" class="btn btn-primary">Į krepšelį</button>
                 </div>
             </div>
         </div>

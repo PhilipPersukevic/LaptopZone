@@ -43,31 +43,66 @@ function renderProducts() {
     const container = document.getElementById('products-grid');
     if (!container) return;
 
-    const urlParams = new URLSearchParams(window.location.search);
+    // 1. Paimame visus produktus pradiniame taške
     let filtered = [...products];
 
-    // Filter by category if in URL
+    // 2. Sinchronizuojame filtrus su URL parametrais (tik pirmą kartą užkrovus)
+    const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
-    if (categoryParam) {
-        filtered = filtered.filter(p => p.category === categoryParam);
-        const categoryFilter = document.getElementById('category-filter');
-        if (categoryFilter) categoryFilter.value = categoryParam;
+    
+    const categoryFilter = document.getElementById('category-filter');
+    
+    // Jei URL yra kategorija ir mes ką tik atėjome į puslapį
+    if (categoryParam && categoryFilter && !categoryFilter.dataset.initialized) {
+        categoryFilter.value = categoryParam;
+        categoryFilter.dataset.initialized = "true"; // Pažymime, kad URL jau pritaikytas
     }
 
-    // Apply current filters
-    filtered = applyFilters(filtered);
+    // 3. Gauname dabartines filtrų reikšmes iš HTML elementų
+    const currentCategory = categoryFilter ? categoryFilter.value : '';
+    const brandFilter = document.getElementById('brand-filter');
+    const currentBrand = brandFilter ? brandFilter.value : '';
+    const searchFilter = document.getElementById('search-filter');
+    const currentSearch = searchFilter ? searchFilter.value.toLowerCase() : '';
+    const sortFilter = document.getElementById('sort-filter');
+    const currentSort = sortFilter ? sortFilter.value : 'name';
 
-    // Render products
+    // 4. VYKDOME FILTRAVIMĄ
+    filtered = filtered.filter(p => {
+        // Kategorijos filtravimas: jei tuščia arba 'all' - rodyti viską
+        const matchCategory = !currentCategory || currentCategory === 'all' || p.category === currentCategory;
+        // Gamintojo filtravimas
+        const matchBrand = !currentBrand || p.brand === currentBrand;
+        // Paieškos filtravimas
+        const matchSearch = p.name.toLowerCase().includes(currentSearch) || 
+                            p.specs.toLowerCase().includes(currentSearch);
+        
+        return matchCategory && matchBrand && matchSearch;
+    });
+
+    // 5. RŪŠIAVIMAS (naudojame jūsų jau turimą sortProducts)
+    filtered = sortProducts(filtered, currentSort);
+
+    // 6. ATVAIZDAVIMAS
     if (filtered.length === 0) {
         container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
             <p style="font-size: 2rem; margin-bottom: 1rem;">😞</p>
             <p style="font-size: 1.1rem; color: var(--primary-color);">Nėra produktų atitinkančių kriterijus</p>
             <p style="color: var(--text-light); margin-bottom: 1.5rem;">Bandykite pakeisti filtrus arba paieškos žodį</p>
-            <button onclick="document.getElementById('category-filter').value=''; document.getElementById('brand-filter').value=''; document.getElementById('search-filter').value=''; document.getElementById('sort-filter').value='name'; renderProducts();" class="btn btn-secondary">Atidaryti visus produktus</button>
+            <button onclick="resetFilters()" class="btn btn-secondary">Rodyti visus produktus</button>
         </div>`;
     } else {
         container.innerHTML = filtered.map(product => createProductCard(product)).join('');
     }
+}
+
+// Pagalbinė funkcija visiems filtrams nunulinti
+function resetFilters() {
+    if (document.getElementById('category-filter')) document.getElementById('category-filter').value = 'all';
+    if (document.getElementById('brand-filter')) document.getElementById('brand-filter').value = '';
+    if (document.getElementById('search-filter')) document.getElementById('search-filter').value = '';
+    if (document.getElementById('sort-filter')) document.getElementById('sort-filter').value = 'name';
+    renderProducts();
 }
 
 function setupFilterListeners() {
@@ -159,14 +194,14 @@ function renderProductDetails(product) {
                 <div style="margin: 2rem 0;">
                     <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">
                         ✓ 2 metų garantija<br>
-                        ✓ Nemokamas pristatymas (€ 5.99, jei suma < € 50)<br>
+                        ✓ Nemokamas pristatymas (€ 5.99, jei suma > € 1500)<br>
                         ✓ Grąžinimas per 14 dienų<br>
                         ✓ Didelės kainos pažadas
                     </p>
                 </div>
 
                 <div style="border-top: 1px solid #e2e8f0; padding-top: 2rem;">
-                    <p style="font-size: 2.5rem; color: #3b82f6; font-weight: 700; margin-bottom: 1.5rem;">
+                    <p style="font-size: 2.5rem; color: #000000; font-weight: 700; margin-bottom: 1.5rem;">
                         ${formatPrice(product.price)}
                     </p>
                     <button onclick="addToCart(${product.id})" class="btn btn-success" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
