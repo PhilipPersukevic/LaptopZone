@@ -8,7 +8,7 @@ const products = [
         brand: "Lenovo",
         category: "gaming",
         price: 1199,
-        image: "💻",
+        image: "lenovolegion5igen9.png",
         specs: "Intel Core i7-13650HX, RTX 4060, 15.6\" 165Hz, 16GB RAM, 512GB SSD",
         description: "Puikus nešiojamasis kompiuteris vidutinio ir aukšto lygio žaidimams. Turi naujausią Intel procesorių bei RTX 4060 vaizdo plokštę."
     },
@@ -18,7 +18,7 @@ const products = [
         brand: "Lenovo",
         category: "gaming",
         price: 1549,
-        image: "💻",
+        image: "lenovolegionpro5gen9.png",
         specs: "AMD Ryzen 7 7745HX, RTX 4070, 16\" 165Hz, 16GB RAM, 512GB SSD",
         description: "Aukščiausios kokybės žaidimų kompiuteris su galingu AMD procesoriumi ir RTX 4070. Puikiai tinka entuziastams."
     },
@@ -28,7 +28,7 @@ const products = [
         brand: "Lenovo",
         category: "gaming",
         price: 2549,
-        image: "💻",
+        image: "lenovolegionpro7i.png",
         specs: "Intel Core i9-13900HX, RTX 4080, 16\" 240Hz MiniLED, 32GB RAM, 1TB SSD",
         description: "Tikras žaidimų žvėris. Galutinis pasirinkimas užkietėjusiems žaidėjams ir profesionalams."
     },
@@ -38,7 +38,7 @@ const products = [
         brand: "ASUS",
         category: "gaming",
         price: 949,
-        image: "💻",
+        image: "asustufgaminga15.png",
         specs: "AMD Ryzen 7 7435HS, RTX 4060, 15.6\" 144Hz FHD, 8GB RAM, 512GB SSD",
         description: "Geriausios vertės žaidimų kompiuteris pradedantiesiems. Puikus našumas už prieinamą kainą."
     },
@@ -48,7 +48,7 @@ const products = [
         brand: "ASUS",
         category: "gaming",
         price: 1699,
-        image: "💻",
+        image: "asusrogstrixg16.png",
         specs: "Intel Core i7-13650HX, RTX 4070, 16\" 165Hz QHD, 16GB RAM, 512GB SSD",
         description: "Aukšto našumo žaidimų kompiuteris. Puikus galios ir mobilumo balansas."
     },
@@ -58,7 +58,7 @@ const products = [
         brand: "ASUS",
         category: "gaming",
         price: 1799,
-        image: "💻",
+        image: "asusrogzephyrusg14.png",
         specs: "AMD Ryzen 9 7940HS, RTX 4060, 14\" 165Hz OLED, 16GB RAM, 512GB SSD",
         description: "Itin portabilus žaidimų įrenginys. Kompaktiškas, bet galingas žaidimams keliaujant."
     },
@@ -70,7 +70,7 @@ const products = [
         brand: "Lenovo",
         category: "work",
         price: 1999,
-        image: "💻",
+        image: "lenovothinkpadx1carbongen11.png",
         specs: "Intel Core i7, 16\" OLED, IR Camera, 16GB RAM, 512GB SSD, 15h battery",
         description: "Aukščiausios klasės verslo kompiuteris. Itin saugus, turintis karinio lygio sertifikatą."
     },
@@ -80,7 +80,7 @@ const products = [
         brand: "Lenovo",
         category: "work",
         price: 1249,
-        image: "💻",
+        image: "lenovothinkpadt14sgen4.png",
         specs: "AMD Ryzen Pro, TPM 2.0, 14\" FHD, 16GB RAM, 512GB SSD, 13h battery",
         description: "Patikimas verslo partneris. Puikiai tinka profesionalams ir didelėms korporacijoms."
     },
@@ -90,7 +90,7 @@ const products = [
         brand: "Lenovo",
         category: "work",
         price: 849,
-        image: "💻",
+        image: "lenovothinkbook14gen6.png",
         specs: "Intel Core i5, 14\" FHD IPS, 8GB RAM, 256GB SSD, 12h battery",
         description: "Puikus pasirinkimas smulkiam verslui ir startuoliams. Puikus kainos ir kokybės santykis."
     },
@@ -100,7 +100,7 @@ const products = [
         brand: "ASUS",
         category: "work",
         price: 1899,
-        image: "💻",
+        image: "asusexpertbookb9oled.png",
         specs: "Intel Core i7, 14\" OLED, IR Camera, 16GB RAM, 512GB SSD, 0.88kg",
         description: "Lengviausias verslo kompiuteris pasaulyje. Idealus nuolat judantiems profesionalams."
     },
@@ -110,7 +110,7 @@ const products = [
         brand: "ASUS",
         category: "work",
         price: 1249,
-        image: "💻",
+        image: "asusexpertbookb7flip.png",
         specs: "Intel Core i7, 14\" 2-in-1 OLED, Stylus, LTE, 16GB RAM, 512GB SSD",
         description: "Universalus „2-in-1“ kompiuteris. Puikiai tinka susitikimams ir prezentacijoms kelyje."
     },
@@ -120,7 +120,7 @@ const products = [
         brand: "ASUS",
         category: "work",
         price: 2399,
-        image: "💻",
+        image: "asusproartstudiobook16.png",
         specs: "Intel Core i9, 16\" OLED 3.2K Pantone, RTX 4050, 32GB RAM, 1TB SSD",
         description: "Kūrėjų svajonių mašina. Puikiai tinka dizaineriams, vaizdo įrašų montuotojams ir turinio kūrėjams."
     },
@@ -132,7 +132,7 @@ const products = [
         brand: "Lenovo",
         category: "student",
         price: 474,
-        image: "💻",
+        image: "lenovoidealpad315gen8.png",
         specs: "Intel Core i5, 15.6\" FHD IPS, 8GB RAM, 512GB SSD, 10h battery",
         description: "Biudžetinis nešiojamasis kompiuteris kasdieniam naudojimui. Puikiai tinka studentams ir paprastoms užduotims."
     },
@@ -142,7 +142,7 @@ const products = [
         brand: "Lenovo",
         category: "student",
         price: 674,
-        image: "💻",
+        image: "lenovoidelpad515gen9.png",
         specs: "Intel Core i5, 15.6\" FHD IPS 300nit, 16GB RAM, 512GB SSD, 12h battery",
         description: "Geriausia vertė studentams. Puikus našumo ir kainos santykis."
     },
@@ -152,7 +152,7 @@ const products = [
         brand: "Lenovo",
         category: "student",
         price: 899,
-        image: "💻",
+        image: "lenovoyoga714gen9.png",
         specs: "Intel Core i5, 14\" OLED 2.8K, 16GB RAM, 512GB SSD, 12h battery",
         description: "Stilingas ir portabilus „2-in-1“ kompiuteris. Puikiai tinka kūrybingiems studentams."
     },
@@ -162,7 +162,7 @@ const products = [
         brand: "ASUS",
         category: "student",
         price: 524,
-        image: "💻",
+        image: "asusvivobook15m1502.png",
         specs: "AMD Ryzen 5, 15.6\" FHD IPS 90Hz, 8GB RAM, 512GB SSD, 9h battery",
         description: "Elegantiškas ir prieinamas. Puikus ekranas pagal šią kainų kategoriją."
     },
@@ -172,7 +172,7 @@ const products = [
         brand: "ASUS",
         category: "student",
         price: 774,
-        image: "💻",
+        image: "asusvivobooks15oled.png",
         specs: "Intel Core i5, 15.6\" OLED FHD, 16GB RAM, 512GB SSD, 10h battery",
         description: "Aukštesnės klasės studentų kompiuteris. Nuostabus OLED ekranas darbui ir pramogoms."
     },
@@ -182,7 +182,7 @@ const products = [
         brand: "ASUS",
         category: "student",
         price: 999,
-        image: "💻",
+        image: "asuszenbook14ux3402.png",
         specs: "Intel Core i7, 14\" OLED 2.8K, 16GB RAM, 512GB SSD, 12h battery, 1.39kg",
         description: "Premium klasės ultrabook'as. Lengvas ir galingas šiuolaikiniam studentui."
     },
@@ -194,7 +194,7 @@ const products = [
         brand: "Lenovo",
         category: "ultrabook",
         price: 2799,
-        image: "💻",
+        image: "lenovothinkpadx1fold.png",
         specs: "Intel Core Ultra, 13.3\" OLED Foldable, 16GB RAM, 512GB SSD",
         description: "Revoliucinis sulankstomas kompiuteris. Ateitis jau čia."
     },
@@ -204,7 +204,7 @@ const products = [
         brand: "Lenovo",
         category: "ultrabook",
         price: 1599,
-        image: "💻",
+        image: "lenovoyoga9i.png",
         specs: "Intel Core i7, 14\" OLED 2.8K, 16GB RAM, 512GB SSD, Built-in stylus",
         description: "Premium klasės lankstomas kompiuteris. Puikiai tinka kūrėjams ir profesionalams."
     },
@@ -214,7 +214,7 @@ const products = [
         brand: "Lenovo",
         category: "ultrabook",
         price: 1299,
-        image: "💻",
+        image: "lenovoslim5iai.png",
         specs: "Intel Core Ultra (NPU), 14\" OLED 2.8K, 16GB RAM, 512GB SSD",
         description: "Dirbtinio intelekto palaikomas kompiuteris. Patirkite skaičiavimo ateitį su NPU procesoriumi."
     },
@@ -224,7 +224,7 @@ const products = [
         brand: "ASUS",
         category: "ultrabook",
         price: 2199,
-        image: "💻",
+        image: "asuszenbookpro14.png",
         specs: "Intel Core i9, 14\" OLED 2.8K, RTX 4070, 32GB RAM, 1TB SSD",
         description: "Galingas ultrabook'as kūrėjams. Kompaktiškas, bet itin pajėgus."
     },
@@ -234,7 +234,7 @@ const products = [
         brand: "ASUS",
         category: "ultrabook",
         price: 2899,
-        image: "💻",
+        image: "asusproart16.png",
         specs: "Intel Core i9, 16\" OLED Pantone, RTX 4090, 32GB RAM, 2TB SSD",
         description: "Aukščiausia kūrybinė mašina. Profesionalaus lygio ekranas ir galia."
     },
@@ -244,7 +244,7 @@ const products = [
         brand: "ASUS",
         category: "ultrabook",
         price: 1199,
-        image: "💻",
+        image: "asusvivobooks15snapdragon.png",
         specs: "Qualcomm Snapdragon X Elite, 15.6\" OLED, 16GB RAM, 512GB SSD, 20+h battery",
         description: "ARM architektūros meistriškumas. Neįtikėtinas baterijos veikimo laikas visos dienos produktyvumui."
     }
@@ -307,9 +307,25 @@ function formatPrice(price) {
 
 // Function to create product card HTML
 function createProductCard(product) {
+    // Handle image display - check if it's a valid image file or emoji/placeholder
+    let imageContent = '';
+    if (product.image && product.image.trim()) {
+        // Check if it's an emoji (single character) or invalid placeholder
+        if (product.image.length === 1 || product.image === '💻' || product.image.includes('💻')) {
+            // Use emoji or placeholder
+            imageContent = `<div style="font-size: 4rem; text-align: center; padding: 2rem 0;">${product.image}</div>`;
+        } else {
+            // Assume it's a filename, add images/ prefix
+            imageContent = `<img src="images/${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">`;
+        }
+    } else {
+        // No image provided, use default placeholder
+        imageContent = `<div style="font-size: 4rem; text-align: center; padding: 2rem 0;">💻</div>`;
+    }
+
     return `
         <div class="product-card" onclick="window.location.href='product.html?id=${product.id}'" style="cursor: pointer;">
-            <div class="product-image">${product.image}</div>
+            <div class="product-image">${imageContent}</div>
             <div class="product-info">
                 <div class="product-brand">${product.brand}</div>
                 <h3 class="product-name">${product.name}</h3>

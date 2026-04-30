@@ -131,7 +131,7 @@ function updateCartSummary() {
     const total = subtotal + shipping;
 
     const subtotalEl = document.getElementById('subtotal');
-    const shippingEl = document.getElementById('shipping');
+    const shippingEl = document.getElementById('cart-shipping');
     const totalEl = document.getElementById('total');
 
     if (subtotalEl) subtotalEl.textContent = formatPrice(subtotal);

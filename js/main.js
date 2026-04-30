@@ -173,9 +173,25 @@ function renderProductDetails(product) {
     const container = document.getElementById('product-details');
     if (!container) return;
 
+    // Handle image display - check if it's a valid image file or emoji/placeholder
+    let imageContent = '';
+    if (product.image && product.image.trim()) {
+        // Check if it's an emoji (single character) or invalid placeholder
+        if (product.image.length === 1 || product.image === '💻' || product.image.includes('💻')) {
+            // Use emoji or placeholder
+            imageContent = `<div style="font-size: 8rem; text-align: center; padding: 4rem 2rem; background: #f0f7ff;">${product.image}</div>`;
+        } else {
+            // Assume it's a filename, add images/ prefix
+            imageContent = `<img src="images/${product.image}" alt="${product.name}" style="width: 100%; height: auto; border-radius: 8px;">`;
+        }
+    } else {
+        // No image provided, use default placeholder
+        imageContent = `<div style="font-size: 8rem; text-align: center; padding: 4rem 2rem; background: #f0f7ff;">💻</div>`;
+    }
+
     container.innerHTML = `
         <div class="product-details-content">
-            <div class="product-image-large">${product.image}</div>
+            <div class="product-image-large">${imageContent}</div>
             <div class="product-info-large">
                 <h1>${product.name}</h1>
                 <p style="color: #0f172a; font-weight: 600;">${product.brand}</p>
