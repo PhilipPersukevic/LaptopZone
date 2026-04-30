@@ -586,8 +586,9 @@ body {
 .product-info {
     padding: 1.5rem;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto auto;
+    gap: 0.5rem;
 }
 
 .product-brand {
@@ -595,15 +596,21 @@ body {
     color: #00D4FF;
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
     letter-spacing: 1px;
+    grid-row: 1;
 }
 
 .product-name {
     font-size: 1.15rem;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 0.5rem;
+    grid-row: 2;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8rem;
 }
 
 .product-category {
@@ -613,28 +620,34 @@ body {
     padding: 0.3rem 0.85rem;
     border-radius: 12px;
     width: fit-content;
-    margin-bottom: 1rem;
     font-weight: 600;
+    grid-row: 3;
 }
 
 .product-specs {
     font-size: 0.85rem;
     color: #999999;
-    margin-bottom: 1rem;
     line-height: 1.6;
+    grid-row: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .product-price {
     font-size: 1.6rem;
     color: #000000;
     font-weight: 800;
-    margin-bottom: 1rem;
+    grid-row: 5;
+    align-self: end;
 }
 
 .product-actions {
     display: flex;
     gap: 0.8rem;
-    margin-top: auto;
+    grid-row: 6;
 }
 
 .product-actions a,
